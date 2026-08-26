@@ -320,6 +320,20 @@ Is regional performance improving year over year?
 
 Where should management investigate first?
 
+---
+
+## Dashboard Preview
+
+### Executive Overview
+
+Sales Intelligence Executive Dashboard](docs/dashboard_executive_preview.png)
+
+The executive dashboard brings together revenue, gross margin, target attainment,
+regional performance, product performance, customer intelligence and monthly trends
+to support management decision-making.
+
+---
+
 Project Objective
 
 The objective is to demonstrate an end-to-end Business Intelligence workflow, from raw transactional data through data validation, analytical modeling, SQL analysis, statistical testing, visualization, root-cause investigation, and business recommendations.
