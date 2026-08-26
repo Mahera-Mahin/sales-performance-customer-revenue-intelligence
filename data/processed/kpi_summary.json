@@ -1,0 +1,9 @@
+{
+  "rows": 50000,
+  "customers": 2200,
+  "regions": 5,
+  "products": 8,
+  "completed_revenue": 8666849379.17,
+  "gross_margin_pct": 21.16,
+  "target_attainment_pct": 97.51
+}

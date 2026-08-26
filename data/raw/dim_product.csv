@@ -1,0 +1,9 @@
+product_name,category,base_price,base_margin
+Engine Systems,Powertrain,180000,0.19
+Power Generation,Power Systems,145000,0.17
+Filtration,Components,42000,0.24
+Aftermarket Parts,Components,28000,0.28
+Cooling Systems,Components,36000,0.22
+Industrial Engines,Engines,225000,0.16
+Service Contracts,Services,65000,0.34
+Telematics,Digital,52000,0.38

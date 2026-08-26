@@ -1,0 +1,6 @@
+One-way ANOVA: Average Order Value by Customer Segment
+H0: Mean order value is equal across segments.
+H1: At least one segment differs.
+F-statistic: 1025.7718
+p-value: 0
+Decision at alpha=0.05: Reject H0
