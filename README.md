@@ -2,7 +2,7 @@
 
 A portfolio-grade **Business Intelligence and analytics platform** demonstrating data quality validation, SQL analytics, KPI reporting, customer intelligence, root-cause analysis, statistical testing, trend analysis, and executive decision support.
 
-> **Dataset:** Reproducible synthetic sales data created specifically for this portfolio project. It is not Cummins data and does not represent actual Cummins performance.
+> **Dataset:** Reproducible synthetic sales data created specifically for this portfolio project. 
 
 ---
 
@@ -42,6 +42,7 @@ Power BI Reporting
 Root-Cause Analysis
        ↓
 Management Recommendations
+
 Dataset
 50,000 sales transactions
 2,200 customers
@@ -326,8 +327,7 @@ Where should management investigate first?
 
 ### Executive Overview
 
-Sales Intelligence Executive Dashboard](docs/dashboard_executive_preview.png)
-
+![Sales Intelligence Executive Dashboard](docs/dashboard_executive_preview.png)
 The executive dashboard brings together revenue, gross margin, target attainment,
 regional performance, product performance, customer intelligence and monthly trends
 to support management decision-making.
