@@ -53,10 +53,9 @@ Python EDA & Statistical Analysis
 Power BI / DAX Reporting
       ↓
 Root-Cause Analysis
----
+```
 
 ## 📈 Power BI Dashboard
-
 Five interactive Power BI pages were developed to analyze sales performance from executive KPIs to product- and customer-level root causes.
 
 ### 1. Executive Overview
@@ -89,41 +88,52 @@ Region → Category → Product drill-down to identify performance gaps.
 
 ![Root Cause Analysis](docs/dashboard/05_root_cause_analysis.png)
 
-🔍 Key Analytical Work
-Built reusable SQL queries for executive KPIs, customer, product, regional and monthly performance.
-Developed Python workflows for data validation, KPI generation, EDA and root-cause analysis.
-Implemented automated checks for duplicates, missing values, invalid sales/discounts, units and margin reconciliation.
-Applied one-way ANOVA to evaluate order-value differences across customer segments.
-Developed DAX measures for Revenue, Gross Margin, Margin %, Target Attainment, Target Variance, AOV and YoY analysis.
-Performed hierarchical Region → Category → Product analysis to investigate target gaps.
-Example Finding
+## 🔍 Key Analytical Work
 
-East → Engines → Industrial Engines | 2025
+- Built reusable SQL queries for executive KPIs, customer, product, regional and monthly performance.
+- Developed Python workflows for data validation, KPI generation, EDA and root-cause analysis.
+- Implemented automated checks for duplicates, missing values, invalid sales/discounts, units and margin reconciliation.
+- Applied one-way ANOVA to evaluate order-value differences across customer segments.
+- Developed DAX measures for Revenue, Gross Margin, Margin %, Target Attainment, Target Variance, AOV and YoY analysis.
+- Performed hierarchical **Region → Category → Product** analysis to investigate target gaps.
 
-Metric	Result
-Revenue	₹116.54M
-Target	₹125.14M
-Target Attainment	93.13%
-Target Gap	-₹8.60M
-Margin	15.84%
-🛠️ Technical Implementation
-Data & Analytics
+### Example Finding
+
+**East → Engines → Industrial Engines | 2025**
+
+| Metric | Result |
+|---|---:|
+| Revenue | ₹116.54M |
+| Target | ₹125.14M |
+| Target Attainment | 93.13% |
+| Target Gap | -₹8.60M |
+| Margin | 15.84% |
+
+---
+
+## 🛠️ Technical Implementation
+
+### Data & Analytics
 
 Python · Pandas · NumPy · SciPy · Exploratory Data Analysis · Statistical Analysis · Root-Cause Analysis
 
-SQL & Database
+### SQL & Database
 
 SQL · PostgreSQL · KPI Queries · Data-Quality Checks · Analytical Data Modeling
 
-Business Intelligence
+### Business Intelligence
 
 Power BI · DAX · Power Query · KPI Dashboards · Trend & Variance Analysis · Interactive Filtering · Drill-Down
 
-Quality & Development
+### Quality & Development
 
 PyTest · Git · GitHub
 
-📁 Repository Structure
+---
+
+## 📁 Repository Structure
+
+```text
 ├── data/
 │   ├── raw/
 │   └── processed/
@@ -135,7 +145,13 @@ PyTest · Git · GitHub
 ├── tests/
 ├── requirements.txt
 └── README.md
-▶️ Run the Analysis
+```
+
+---
+
+## ▶️ Run the Analysis
+
+```bash
 pip install -r requirements.txt
 
 python src/01_data_quality.py
@@ -144,21 +160,29 @@ python src/03_hypothesis_testing.py
 python src/04_root_cause_analysis.py
 
 pytest
-💡 Business Questions Supported
-Area	Question
-Performance	Are we achieving targets?
-Regional	Which regions are driving or missing targets?
-Product	Which products contribute to revenue and margin?
-Customer	Which customers and segments drive value?
-Diagnostic	Where are the largest performance gaps?
-Trend	How are revenue and performance changing over time?
-📌 Outcome
+```
 
-A complete BI workflow connecting data quality → SQL analytics → Python analysis → statistical validation → Power BI reporting → root-cause investigation, demonstrating practical capabilities in Business Intelligence, data analysis, KPI reporting, and decision support.
+---
 
-Data Disclaimer
+## 💡 Business Questions Supported
+
+| Area | Question |
+|---|---|
+| Performance | Are we achieving targets? |
+| Regional | Which regions are driving or missing targets? |
+| Product | Which products contribute to revenue and margin? |
+| Customer | Which customers and segments drive value? |
+| Diagnostic | Where are the largest performance gaps? |
+| Trend | How are revenue and performance changing over time? |
+
+---
+
+## 📌 Outcome
+
+A complete BI workflow connecting **data quality → SQL analytics → Python analysis → statistical validation → Power BI reporting → root-cause investigation**, demonstrating practical capabilities in **Business Intelligence, data analysis, KPI reporting, and decision support**.
+
+---
+
+### Data Disclaimer
 
 This repository uses synthetic data created for portfolio purposes. All metrics and business findings apply only to this dataset.
-
-
-**This is the version I would commit.** It is concise enough for a recruiter to scan quickly while still showing t
