@@ -53,26 +53,41 @@ Python EDA & Statistical Analysis
 Power BI / DAX Reporting
       ↓
 Root-Cause Analysis
-📈 Power BI Dashboard
+---
 
-Five interactive dashboard pages were developed:
+## 📈 Power BI Dashboard
 
-Executive Overview — Revenue, gross margin, target attainment, customers, monthly trends and regional performance.
-Regional Performance — Revenue vs target, target attainment, margin, variance and regional trends.
-Product Performance — Product/category revenue, units, margin and target performance.
-Customer Intelligence — Customer contribution, segments, and top customers.
-Root Cause Analysis — Region → Category → Product drill-down to identify performance gaps.
-Dashboard Screenshots
+Five interactive Power BI pages were developed to analyze sales performance from executive KPIs to product- and customer-level root causes.
 
-Executive Overview
+### 1. Executive Overview
 
-Regional Performance
+Revenue, gross margin, target attainment, customer base, monthly trends and regional performance.
 
-Product Performance
+![Executive Overview](docs/dashboard/01_executive_overview.png)
 
-Customer Intelligence
+### 2. Regional Performance
 
-Root Cause Analysis
+Revenue vs target, target attainment, margin, variance and regional trends.
+
+![Regional Performance](docs/dashboard/02_regional_performance.png)
+
+### 3. Product Performance
+
+Product and category revenue, units, margin and target performance.
+
+![Product Performance](docs/dashboard/03_product_performance.png)
+
+### 4. Customer Intelligence
+
+Customer contribution, segments, average order value and top customers.
+
+![Customer Intelligence](docs/dashboard/04_customer_intelligence.png)
+
+### 5. Root Cause Analysis
+
+Region → Category → Product drill-down to identify performance gaps.
+
+![Root Cause Analysis](docs/dashboard/05_root_cause_analysis.png)
 
 🔍 Key Analytical Work
 Built reusable SQL queries for executive KPIs, customer, product, regional and monthly performance.
