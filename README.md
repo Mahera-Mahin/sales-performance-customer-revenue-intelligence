@@ -1,341 +1,189 @@
 # Sales Performance, Customer & Revenue Intelligence Platform
 
-A portfolio-grade **Business Intelligence and analytics platform** demonstrating data quality validation, SQL analytics, KPI reporting, customer intelligence, root-cause analysis, statistical testing, trend analysis, and executive decision support.
+A Business Intelligence and analytics solution that transforms transactional sales data into **validated KPIs, performance insights, root-cause analysis, and interactive Power BI reporting**.
 
-> **Dataset:** Reproducible synthetic sales data created specifically for this portfolio project. 
+**Tech Stack:** SQL · PostgreSQL · Python · Pandas · NumPy · SciPy · Power BI · DAX · Power Query · PyTest · Git/GitHub
+
+> **Data Note:** Synthetic dataset created specifically for portfolio analysis. 
 
 ---
 
-## Business Problem
+## 📊 Project at a Glance
 
-Sales organizations need to understand not only **what happened**, but also:
+| Metric | Result |
+|---|---:|
+| Transactions | 50,000 |
+| Customers | 2,200 |
+| Regions | 5 |
+| Products / Product Families | 8 |
+| Analysis Period | 2023–2025 |
+| Completed Orders | 47,017 |
+| Revenue | ₹8.67B |
+| Gross Margin | ₹1.83B |
+| Gross Margin % | 21.16% |
+| Target Attainment | 97.51% |
+| Average Order Value | ₹184,334 |
 
-- Are regions achieving their sales targets?
-- Which products are driving revenue and margin?
-- Which customer segments contribute the most value?
+---
+
+## 🎯 Business Objective
+
+Build a decision-oriented BI platform to answer:
+
+- Are sales targets being achieved?
+- Which regions and products drive revenue and margin?
+- Which customers and segments contribute the most value?
 - Where are the largest performance gaps?
-- What factors are driving underperformance?
-- Is performance improving or deteriorating over time?
-- Which areas should management prioritize?
-
-This project builds an end-to-end analytical workflow to answer these questions and convert operational sales data into actionable business insights.
+- What factors contribute to underperformance?
+- How is performance changing over time?
 
 ---
 
-## Business Workflow
+## 🔄 Analytical Workflow
 
 ```text
-Raw Transactions
-       ↓
+Raw Sales Data
+      ↓
 Data Quality Validation
-       ↓
-PostgreSQL Staging
-       ↓
-Analytical Star Schema
-       ↓
-SQL KPI & Performance Layer
-       ↓
+      ↓
+SQL / PostgreSQL Analysis
+      ↓
 Python EDA & Statistical Analysis
-       ↓
-Power BI Reporting
-       ↓
+      ↓
+Power BI / DAX Reporting
+      ↓
 Root-Cause Analysis
-       ↓
-Management Recommendations
+📈 Power BI Dashboard
 
-Dataset
-50,000 sales transactions
-2,200 customers
-5 regions
-8 products/product families
-2023–2025 historical period
-Revenue, cost, margin, discount and target information
-Customer segment, industry, city and regional attributes
-Key Validated Results
+Five interactive dashboard pages were developed:
 
-Analysis of completed orders produced the following validated portfolio-level KPIs:
+1. Executive Overview
 
-KPI	Result
-Completed Orders	47,017
-Active Customers	2,200
-Revenue	8.67B
-Gross Margin	1.83B
-Gross Margin %	21.16%
-Average Order Value	184,334
+Revenue, gross margin, target attainment, customers, monthly trends and regional performance.
 
-The analytical results were independently reconciled between the Python processing pipeline and PostgreSQL.
+2. Regional Performance
 
-Root-Cause Analysis Example
+Revenue vs target, target attainment, margin, variance and regional trends.
 
-A regional/category drill-down identified an important 2025 performance gap:
+3. Product Performance
 
-East
-  ↓
-Engines
-  ↓
-Industrial Engines
-Finding
+Product/category revenue, units, margin and target performance.
+
+4. Customer Intelligence
+
+Customer contribution, segments, and top customers.
+
+5. Root Cause Analysis
+
+Region → Category → Product drill-down to identify performance gaps.
+
+Dashboard Screenshots
+Executive Overview docs/dashboard/01_executive_overview.png
+
+Regional Performance docs/dashboard/02_regional_performance.png
+
+Product Performance docs/dashboard/03_product_performance.png
+
+Customer Intelligence docs/dashboard/04_customer_intelligence.png
+
+Root Cause Analysis docs/dashboard/05_root_cause_analysis.png
+
+🔍 Key Analytical Work
+Built reusable SQL queries for executive KPIs, customer, product, regional and monthly performance.
+Developed Python analytics workflows for data validation, KPI generation, EDA and root-cause analysis.
+Implemented automated checks for duplicates, missing values, invalid sales/discounts, units and margin reconciliation.
+Applied one-way ANOVA to evaluate order-value differences across customer segments.
+Developed DAX measures for Revenue, Gross Margin, Margin %, Target Attainment, Target Variance, AOV and YoY analysis.
+Performed hierarchical Region → Category → Product analysis to investigate target gaps.
+Example Finding
+
+East → Engines → Industrial Engines | 2025
+
 Metric	Result
-Revenue	116.54M
-Target	125.14M
-Attainment	93.13%
-Target Gap	-8.60M
-Gross Margin	18.46M
-Margin %	15.84%
+Revenue	₹116.54M
+Target	₹125.14M
+Target Attainment	93.13%
+Target Gap	-₹8.60M
+Margin	15.84%
+🛠️ Technical Implementation
 
-The analysis demonstrates a structured drill-down from:
+Data & Analytics
 
-Region → Category → Product → Customer Segment
-
-rather than stopping at high-level KPI reporting.
-
-This approach helps identify where performance is below target and what level of the business hierarchy requires further investigation.
-
-Customer Intelligence
-
-The customer analysis evaluates:
-
-Customer revenue
-Customer segment contribution
-Revenue per customer
-Order activity
-Gross margin
-Average order value
-Regional and industry performance
-
-Customer segments were analyzed to understand both revenue contribution and customer-level economics.
-
-Product Intelligence
-
-The product analysis evaluates:
-
-Revenue
-Units sold
-Gross margin
-Margin %
-Revenue per unit
-Product/category contribution
-Target attainment
-
-This supports identification of high-revenue products as well as products with stronger or weaker profitability.
-
-Regional Intelligence
-
-Regional analysis includes:
-
-Revenue
-Target
-Target attainment
-Target gap
-Gross margin
-Margin %
-Year-over-year performance
-Region/category root-cause analysis
-
-The analysis can be drilled down from regional performance into individual categories and products.
-
-Trend Analysis
-
-The monthly analytical layer evaluates:
-
-Monthly revenue
-Monthly target
-Target attainment
-Target gap
-Gross margin
-Margin %
-Month-over-month growth
-Year-over-year growth
-Monthly order and customer activity
-
-This allows management to distinguish between isolated performance fluctuations and sustained trends.
-
+Python
+Pandas
+NumPy
+SciPy
+Exploratory Data Analysis
 Statistical Analysis
+Root-Cause Analysis
 
-The project includes hypothesis testing using one-way ANOVA to evaluate whether average order value differs significantly across customer segments.
+SQL & Database
 
-The analysis provides statistical evidence to complement descriptive KPI reporting rather than relying solely on visual differences.
+SQL
+PostgreSQL
+KPI queries
+Data-quality checks
+Analytical data modeling
 
-Data Quality & Validation
+Business Intelligence
 
-The project implements automated data-quality checks covering:
-
-Duplicate order IDs
-Null customer keys
-Null product keys
-Invalid sales values
-Invalid units
-Invalid discount percentages
-Gross-margin reconciliation
-Invalid order statuses
-Missing order dates
-
-The Python data-quality pipeline reports:
-
-All data-quality checks passed.
-
-Automated tests are also included under:
-
-tests/
-└── test_data_quality.py
-PostgreSQL Analytical Architecture
-
-The project uses PostgreSQL as the analytical database layer.
-
-                    dim_date
-                       │
-                       │
-dim_customer ──── fact_sales ──── dim_product
-                       │
-                       │
-                  dim_region
-
-                  fact_targets
-Data model
-dim_customer — customer attributes and segmentation
-dim_product — product/category information
-dim_region — regional dimension
-dim_date — date/calendar dimension
-fact_sales — transactional sales data
-fact_targets — regional/category sales targets
-
-The dimensional structure supports reusable SQL analysis and BI reporting.
-
-SQL Analytical Layer
-sql/
-├── 01_schema.sql
-├── 02_kpi_queries.sql
-├── 03_data_quality_checks.sql
-├── 04_customer_performance.sql
-├── 05_product_performance.sql
-├── 06_region_category_performance.sql
-└── 07_monthly_performance.sql
-
-The SQL layer provides reusable analytical queries for:
-
-Executive KPIs
-Customer performance
-Product performance
-Regional/category performance
-Root-cause analysis
-Monthly performance
-Target attainment
-Margin analysis
-Trend analysis
-Python Analytics Pipeline
-src/
-├── 01_data_quality.py
-├── 02_eda_and_kpis.py
-├── 03_hypothesis_testing.py
-└── 04_root_cause_analysis.py
-Python capabilities
-Data validation
-Exploratory data analysis
-KPI generation
-Customer segmentation analysis
-Product analysis
-Regional analysis
-Statistical hypothesis testing
-Root-cause analysis
-Analytical output generation
 Power BI
+DAX
+Power Query
+KPI dashboards
+Trend & variance analysis
+Interactive filtering and drill-down
 
-Power BI is used as the executive reporting and visualization layer.
+Quality & Development
 
-The dashboard is designed around:
-
-Executive KPIs
-Revenue performance
-Gross margin
-Target attainment
-Regional performance
-Product performance
-Customer segmentation
-Trend analysis
-Root-cause analysis
-
-Supporting documentation is available under:
-
-powerbi/
-├── BUILD_GUIDE.md
-└── DAX_Measures.md
-
-The Power BI layer is designed to translate the underlying SQL and analytical outputs into decision-oriented reporting.
-
-Technology Stack
-
-Python · Pandas · NumPy · PostgreSQL · SQL · Power BI · DAX · Power Query · Excel · Git/GitHub
-
-Repository Structure
-sales-performance-customer-revenue-intelligence/
-│
+PyTest
+Git
+GitHub
+📁 Repository Structure
 ├── data/
 │   ├── raw/
 │   └── processed/
-│
 ├── sql/
-│
 ├── src/
-│
-├── tests/
-│
 ├── powerbi/
-│
 ├── docs/
-│
+│   └── dashboard/
+├── tests/
 ├── requirements.txt
-├── README.md
-├── LICENSE
-└── .gitignore
-Running the Python Pipeline
-
-Create and activate a virtual environment, then install dependencies:
-
+└── README.md
+▶️ Run the Analysis
 pip install -r requirements.txt
-
-Run the analytical pipeline:
 
 python src/01_data_quality.py
 python src/02_eda_and_kpis.py
 python src/03_hypothesis_testing.py
 python src/04_root_cause_analysis.py
 
-Run automated tests:
-
 pytest
-Example Business Questions Answered
+💡 Business Questions Supported
 
-The platform is designed to answer questions such as:
+Performance: Are we achieving targets?
 
-Are we achieving our sales targets?
+Regional: Which regions are driving or missing targets?
 
-Which region is underperforming?
+Product: Which products contribute to revenue and margin?
 
-Which products are contributing to the target gap?
+Customer: Which customers and segments drive value?
 
-Which customer segments generate the most revenue?
+Diagnostic: Where are the largest performance gaps?
 
-Which products have stronger margins?
+Trend: How are revenue and performance changing over time?
 
-Is regional performance improving year over year?
+📌 Outcome
 
-Where should management investigate first?
+A complete BI workflow connecting data quality → SQL analytics → Python analysis → statistical validation → Power BI reporting → root-cause investigation, demonstrating practical capabilities in Business Intelligence, data analysis, KPI reporting, and decision support.
 
----
+Data Disclaimer
 
-## Dashboard Preview
+This repository uses synthetic data created for portfolio purposes. All metrics and business findings apply only to this dataset.
 
-### Executive Overview
 
-![Sales Intelligence Executive Dashboard](docs/dashboard_executive_preview.png)
-The executive dashboard brings together revenue, gross margin, target attainment,
-regional performance, product performance, customer intelligence and monthly trends
-to support management decision-making.
 
----
+within a minute.
 
-Project Objective
-
-The objective is to demonstrate an end-to-end Business Intelligence workflow, from raw transactional data through data validation, analytical modeling, SQL analysis, statistical testing, visualization, root-cause investigation, and business recommendations.
-
-The project emphasizes decision-oriented analytics rather than dashboard reporting alone.
+And importantly, it keeps the detailed technical evidence inside your actual `sql/`, `src/`, `powerbi/`, `te
