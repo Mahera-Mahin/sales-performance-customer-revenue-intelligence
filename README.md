@@ -154,6 +154,7 @@ PyTest · Git · GitHub
 ```bash
 pip install -r requirements.txt
 
+python src/00_prepare_sales_analytics.py
 python src/01_data_quality.py
 python src/02_eda_and_kpis.py
 python src/03_hypothesis_testing.py
